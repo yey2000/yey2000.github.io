@@ -19,6 +19,7 @@ function callweather() {
              document.getElementById("max_temperature").innerHTML = theResponse.main.temp_max;
              document.getElementById("min_temperature").innerHTML = theResponse.main.temp_min;
              document.getElementById("feels_like").innerHTML = theResponse.main.feels_like;
+             document.getElementById("description").innerHTML = theResponse.weather[0].description;
              //alert(JSON.stringify(xhttp.responseText));
          }
      };
