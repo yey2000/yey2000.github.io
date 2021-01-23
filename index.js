@@ -1,3 +1,8 @@
+//xyz = document.getElementById('abc');
+//console.log(xyz);
+//abc = document.getElementById('abc');
+//xyz.onSubmit=callweather;
+
 function callweather() {
     //e.preventDefault()
     var xhttp = new XMLHttpRequest();
@@ -7,14 +12,18 @@ function callweather() {
              //console.log(document.getElementById('city').value);
              //console.log(xhttp.responseText);
              var theResponse = JSON.parse(xhttp.responseText);
-             var temp = theResponse.name + "'s temp is " + theResponse.main.temp;
+             var temp = theResponse.main.temp;
              console.log(temp);
-             document.getElementById("weather").innerHTML = temp;
+             console.log(theResponse);
+             document.getElementById("temperature").innerHTML = theResponse.main.temp;
+             document.getElementById("max_temperature").innerHTML = theResponse.main.temp_max;
+             document.getElementById("min_temperature").innerHTML = theResponse.main.temp_min;
+             document.getElementById("feels_like").innerHTML = theResponse.main.feels_like;
              //alert(JSON.stringify(xhttp.responseText));
          }
      };
      var city = document.getElementById("city").value;
-     var appid = "fbc072eb5267056880761b29b86ad73e";
+     var appid = "fbc072eb5267056880761b29b86ad73e"
      var website = "https://api.openweathermap.org/data/2.5/weather";
      console.log(city);
      //weatherURL= "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=fbc072eb5267056880761b29b86ad73e";
