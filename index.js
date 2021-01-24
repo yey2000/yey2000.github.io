@@ -1,7 +1,13 @@
-//xyz = document.getElementById('abc');
-//console.log(xyz);
-//abc = document.getElementById('abc');
-//xyz.onSubmit=callweather;
+var city = document.getElementById("city");
+city.addEventListener('keypress', e=> {
+    console.log(e.target);
+    console.log("here");
+    if (e.keyCode === 13){
+        e.preventDefault();
+        document.getElementById("buttonweather").click();
+    }
+})
+
 
 function callweather() {
     //e.preventDefault()
