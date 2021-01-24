@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
-    <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -13,7 +12,7 @@
         Please enter a city name: <br>
         <input type="text" onfocus="this.value=''" id="city">
    </form>
-   <button class="button" onclick="callweather()">Get Temperature</button>
+   <button class="button" id='buttonweather' onclick="callweather()">Get Temperature</button>
     </h4>
    <table>
     <tr>
@@ -37,6 +36,6 @@
         <td id=feels_like></td>
        </tr>
    </table>
-   
+   <script src="index.js"></script>
 </body>
 </html>
