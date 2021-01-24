@@ -9,12 +9,20 @@
 <body>
     <h4>
    <form >
-        Please enter a city name: <br>
+        Please enter a city name (or city,state; or city,state,country -- state and country are 2 digits ISO code) <br>
         <input type="text" onfocus="this.value=''" id="city">
    </form>
    <button class="button" id='buttonweather' onclick="callweather()">Get Weather Details</button>
     </h4>
    <table>
+    <tr>
+        <td>City</td>
+        <td id=cityname></td>
+    </tr>
+    <tr>
+        <td>Country</td>
+        <td id=country></td>
+    </tr>
     <tr>
         <td>Weather</td>
         <td id=description></td>
