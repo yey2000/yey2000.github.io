@@ -26,11 +26,13 @@ function callweather() {
              document.getElementById("min_temperature").innerHTML = theResponse.main.temp_min;
              document.getElementById("feels_like").innerHTML = theResponse.main.feels_like;
              document.getElementById("description").innerHTML = theResponse.weather[0].description;
+             document.getElementById("cityname").innerHTML = theResponse.name;
+             document.getElementById("country").innerHTML = theResponse.sys.country;
              //alert(JSON.stringify(xhttp.responseText));
          }
      };
      var city = document.getElementById("city").value;
-     var appid = "fbc072eb5267056880761b29b86ad73e"
+     var appid = "fbc072eb5267056880761b29b86ad73e";
      var website = "https://api.openweathermap.org/data/2.5/weather";
      console.log(city);
      //weatherURL= "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=fbc072eb5267056880761b29b86ad73e";
